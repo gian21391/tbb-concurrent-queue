@@ -35,6 +35,7 @@ matrix:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-trusty-4.0
           packages:
+            - libc++abi-dev
             - clang-4.0
             - g++-5
       env: COMPILER=clang++-4.0
