@@ -41,7 +41,6 @@
 
 
 namespace tbb {
-
 namespace internal {
 
 typedef concurrent_queue_base_v3 concurrent_queue_base;

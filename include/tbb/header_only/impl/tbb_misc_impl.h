@@ -49,8 +49,8 @@
 #include <cxxabi.h>
 #endif
 
-namespace tbb::internal
-{
+namespace tbb {
+namespace internal {
 
 #if TBB_USE_EXCEPTIONS
 #define DO_THROW(exc, init_args) throw exc init_args;
@@ -217,6 +217,7 @@ bool cpu_has_speculation() {
 #endif /* __TBB_TSX_AVAILABLE */
 }
 
+}
 }
 
 #endif //TBB_CONCURRENT_QUEUE_TBB_MISC_IMPL_H

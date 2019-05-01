@@ -21,6 +21,8 @@
 #ifndef TBB_CONCURRENT_QUEUE_TBB_EXCEPTION_IMPL_H
 #define TBB_CONCURRENT_QUEUE_TBB_EXCEPTION_IMPL_H
 
+#include <stdexcept>
+
 namespace tbb {
 
 const char* bad_last_alloc::what() const throw() { return "bad allocation in previous or concurrent attempt"; }
@@ -31,8 +33,8 @@ const char* missing_wait::what() const throw() { return "wait() was not called o
 
 }
 
-namespace tbb::internal
-{
+namespace tbb {
+namespace internal {
 
 #if TBB_USE_EXCEPTIONS
 #define DO_THROW(exc, init_args) throw exc init_args;
@@ -102,6 +104,7 @@ void throw_exception_v4(exception_id eid)
 #endif /* !TBB_USE_EXCEPTIONS && __APPLE__ */
 }
 
+}
 }
 
 #endif //TBB_CONCURRENT_QUEUE_TBB_EXCEPTION_IMPL_H

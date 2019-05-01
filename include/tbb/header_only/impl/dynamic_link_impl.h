@@ -107,8 +107,8 @@ soon as all of the symbols have been resolved.
   3. Weak symbols: if weak symbols are available they are returned.
 */
 
-namespace tbb::internal
-{
+namespace tbb {
+namespace internal {
 
 #if __TBB_WEAK_SYMBOLS_PRESENT || __TBB_DYNAMIC_LOAD_ENABLED
 
@@ -577,6 +577,7 @@ bool dynamic_link( const char*, const dynamic_link_descriptor*, size_t, dynamic_
     void dynamic_unlink_all() {}
 #endif /* __TBB_WEAK_SYMBOLS_PRESENT || __TBB_DYNAMIC_LOAD_ENABLED */
 
+}
 }
 
 #endif //TBB_CONCURRENT_QUEUE_DYNAMIC_LINK_IMPL_H

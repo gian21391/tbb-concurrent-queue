@@ -47,7 +47,9 @@ void  scalable_aligned_free( void* );
 
 #endif /* __TBB_WEAK_SYMBOLS_PRESENT */
 
-namespace tbb::internal
+namespace tbb
+{
+namespace internal
 {
 
 //! Dummy routine used for first indirect call via MallocHandler.
@@ -247,6 +249,7 @@ bool __TBB_EXPORTED_FUNC is_malloc_used_v3() {
   return (void*)MallocHandler == (void*)&std::malloc;
 }
 
+}
 }
 
 #include "tbb_misc_impl.h"
