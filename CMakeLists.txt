@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.1)
 project(tbb_concurrent_queue LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Options
+option(TBBCC_EXAMPLES "Build examples" OFF)
+option(TBBCC_TEST "Build tests" OFF)
 
 # some specific compiler definitions
 include(CheckCXXCompilerFlag)
@@ -13,5 +17,13 @@ endif()
 add_definitions(-Wall -Wextra)
 
 add_subdirectory(include)
-add_subdirectory(example)
-add_subdirectory(test)
+
+if(TBBCC_EXAMPLES)
+  add_subdirectory(example)
+endif()
+
+if(TBBCC_TEST)
+  enable_testing()
+  add_subdirectory(test)
+endif()
+
