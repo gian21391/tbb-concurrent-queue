@@ -1,0 +1,40 @@
+sudo: required
+dist: trusty
+
+language: cpp
+script:
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DTBBCC_TEST=ON -DTBBCC_EXAMPLES=ON ..
+  - make test_concurrent_queue_whitebox_exe
+  - make test_concurrent_queue_exe
+  - make test
+
+matrix:
+  include:
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env: COMPILER=g++-7
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+      env: COMPILER=g++-6
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-4.0
+          packages:
+            - clang-4.0
+            - g++-5
+      env: COMPILER=clang++-4.0
