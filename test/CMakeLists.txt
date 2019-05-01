@@ -1,0 +1,10 @@
+find_package (Threads)
+add_definitions(-DUSE_PTHREAD)
+
+add_executable(test_concurrent_queue_exe test_concurrent_queue.cpp)
+target_link_libraries(test_concurrent_queue_exe PUBLIC tbb_concurrent_queue ${CMAKE_THREAD_LIBS_INIT})
+add_test(test_concurrent_queue test_concurrent_queue_exe)
+
+add_executable(test_concurrent_queue_whitebox_exe test_concurrent_queue_whitebox.cpp)
+target_link_libraries(test_concurrent_queue_whitebox_exe PUBLIC tbb_concurrent_queue ${CMAKE_THREAD_LIBS_INIT})
+add_test(test_concurrent_queue_whitebox test_concurrent_queue_whitebox_exe)

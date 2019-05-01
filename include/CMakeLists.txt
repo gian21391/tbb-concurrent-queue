@@ -1,0 +1,3 @@
+add_library(tbb_concurrent_queue INTERFACE)
+target_include_directories(tbb_concurrent_queue INTERFACE ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(tbb_concurrent_queue INTERFACE dl)
