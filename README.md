@@ -1,6 +1,6 @@
 # TBB Concurrent Queue (header only)
 
-[![Build Status](https://travis-ci.com/gian21391/tbb-concurrent-queue.svg?token=6PiwUbmzpysi8pdxjBxz&branch=master)](https://travis-ci.org/joemccann/dillinger) [![Apache License Version 2.0](https://img.shields.io/badge/license-Apache_2.0-green.svg)](LICENSE) [![Stable release](https://img.shields.io/badge/version-2019_U5-green.svg)](https://github.com/01org/tbb/releases/tag/2019_U5)
+[![Build Status](https://travis-ci.com/gian21391/tbb-concurrent-queue.svg?branch=master)](https://travis-ci.com/gian21391/tbb-concurrent-queue) [![Apache License Version 2.0](https://img.shields.io/badge/license-Apache_2.0-green.svg)](LICENSE) [![Stable release](https://img.shields.io/badge/version-2019_U5-green.svg)](https://github.com/01org/tbb/releases/tag/2019_U5)
 
 TBB Concurrent Queue is a header-only version of the Concurrent Queue provided by the library [Threading Building Blocks (TBB)](https://www.threadingbuildingblocks.org/).
 
