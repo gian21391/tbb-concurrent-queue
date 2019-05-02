@@ -15,10 +15,6 @@ if (HAS_FCOLOR_DIAGNOSTICS)
   add_definitions(-fcolor-diagnostics)
 endif()
 add_definitions(-Wall -Wextra)
-if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  # using regular Clang or AppleClang
-  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
-endif()
 
 add_subdirectory(include)
 
