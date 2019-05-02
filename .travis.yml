@@ -8,6 +8,7 @@ script:
   - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DTBBCC_TEST=ON -DTBBCC_EXAMPLES=ON ..
   - make test_concurrent_queue_whitebox_exe
   - make test_concurrent_queue_exe
+  - make test_concurrent_priority_queue_exe
   - make test
 
 matrix:
